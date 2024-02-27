@@ -47,9 +47,6 @@ return {
 					TelescopePromptNormal = { bg = "overlay" },
 					TelescopePromptBorder = { fg = "overlay", bg = "overlay" },
 					TelescopePromptPrefix = { fg = "love", bg = "overlay" },
-					NvimTreeCursorLine = { bg = "surface" },
-					NvimTreeNormal = { bg = "#161420" },
-					NvimTreeWinSeparator = { bg = "#161420", fg = "#161420" },
 					CmpWinBorder = { fg = "overlay", bg = "base" },
 
 					DiagnosticVirtualTextError = { bg = "#191724" },
