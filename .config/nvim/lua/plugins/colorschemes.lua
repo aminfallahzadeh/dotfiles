@@ -1,36 +1,37 @@
 return {
-	{
-		"catppuccin/nvim",
-		lazy = false,
-		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			require("catppuccin").setup({
-				flavour = "macchiato",
-				integrations = {
-					aerial = true,
-					indent_blankline = {
-						enabled = true,
-						scope_color = "lavender",
-						colored_indent_levels = false,
-					},
-				},
-			})
-			-- vim.cmd.colorscheme("catppuccin")
-		end,
-	},
-	{
-		"loctvl842/monokai-pro.nvim",
-		config = function()
-			require("monokai-pro").setup({
-				devicons = true,
-			})
-			-- vim.cmd.colorscheme("monokai-pro")
-		end,
-	},
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	lazy = false,
+	-- 	name = "catppuccin",
+	-- 	config = function()
+	-- 		require("catppuccin").setup({
+	-- 			flavour = "macchiato",
+	-- 			integrations = {
+	-- 				aerial = true,
+	-- 				indent_blankline = {
+	-- 					enabled = true,
+	-- 					scope_color = "lavender",
+	-- 					colored_indent_levels = false,
+	-- 				},
+	-- 			},
+	-- 		})
+	-- 		-- vim.cmd.colorscheme("catppuccin")
+	-- 	end,
+	-- },
+	-- {
+	-- 	"loctvl842/monokai-pro.nvim",
+	-- 	config = function()
+	-- 		require("monokai-pro").setup({
+	-- 			devicons = true,
+	-- 		})
+	-- 		-- vim.cmd.colorscheme("monokai-pro")
+	-- 	end,
+	-- },
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
+		lazy = false,
+		priority = 1000,
 		config = function()
 			require("rose-pine").setup({
 				highlight_groups = {
@@ -53,6 +54,8 @@ return {
 					DiagnosticVirtualTextHint = { bg = "#191724" },
 					DiagnosticVirtualTextInfo = { bg = "#191724" },
 					DiagnosticVirtualTextWarn = { bg = "#191724" },
+
+					WinSeparator = { fg = "#000000" },
 
 					CursorLineNr = { fg = "#ebbcba" },
 				},

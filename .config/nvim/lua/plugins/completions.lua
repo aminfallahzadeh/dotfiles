@@ -10,12 +10,14 @@ return {
 		dependencies = {
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
+			"onsails/lspkind.nvim",
 		},
 	},
 	{
 		"hrsh7th/nvim-cmp",
 		config = function()
 			local cmp = require("cmp")
+			local icons = require("core.icons")
 			require("luasnip.loaders.from_vscode").lazy_load()
 
 			cmp.setup({
@@ -55,6 +57,16 @@ return {
 				}, {
 					{ name = "buffer" },
 				}),
+				formatting = {
+					fields = { "kind", "abbr", "menu" },
+					format = function(_, item)
+						local kind = item.kind
+						item.kind = icons.kind[kind]
+						item.menu = kind:gsub("(%l)(%u)", "%1 %2"):lower()
+
+						return item
+					end,
+				},
 			})
 		end,
 	},

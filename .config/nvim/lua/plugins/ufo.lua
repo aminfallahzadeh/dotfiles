@@ -30,12 +30,7 @@ return {
 			print("ufo not found!")
 		end
 
-		vim.opt.signcolumn = "yes"
-		vim.o.foldcolumn = "1"
-		vim.o.foldlevel = 99
-		vim.o.foldlevelstart = 99
-		vim.o.foldenable = true
-		vim.o.fillchars = [[eob: ,fold: ,foldopen:▼,foldsep: ,foldclose:►]]
+		-- vim.o.fillchars = [[fold: ,foldopen:▼,foldsep: ,foldclose:►]]
 		ufo.setup({
 			provider_selector = function()
 				return { "treesitter", "indent" }

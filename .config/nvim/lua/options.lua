@@ -1,5 +1,6 @@
 -- set leader key to space
 vim.g.mapleader = " "
+vim.opt.fillchars = { eob = " ", fold = " ", foldopen = "▼", foldsep = " ", foldclose = "⏵" }
 
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
@@ -41,7 +42,7 @@ vim.opt.smartindent = true
 -- enable auto indent
 vim.opt.autoindent = true
 
--- disable swap file alert
+-- disable swap file
 vim.opt.swapfile = false
 
 -- cdm line settings
@@ -87,26 +88,25 @@ vim.opt.cursorlineopt = "number"
 vim.opt.scrolloff = 10
 
 -- disable vim intro
-vim.opt.shortmess:append("I")
+vim.opt.shortmess:append("sI")
+
+vim.opt.ruler = true
 
 -- I dont know what these are for ?!!!
 vim.opt.backup = false
 vim.o.laststatus = 3
--- vim.opt.expandtab = true
--- vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
--- vim.opt.inccommand = "split"
 vim.opt.shiftwidth = 2
 vim.opt.wildignore:append({ "*/node_modules/*" })
 
 -- Undercurl
-vim.cmd([[let &t_Cs = "\e[4:3m"]])
-vim.cmd([[let &t_Ce = "\e[4:0m"]])
+-- vim.cmd([[let &t_Cs = "\e[4:3m"]])
+-- vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Add asterisks in block comments
-vim.opt.formatoptions:append({ "r" })
-
-vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
-vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
+-- vim.opt.formatoptions:append({ "r" })
+--
+-- vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
+-- vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
 
 -- blinking cursor
 -- vim.o.guicursor = "n-v-c-sm-i-ci-ve:block,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor"
