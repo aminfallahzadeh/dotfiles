@@ -10,6 +10,11 @@ vim.api.nvim_set_keymap("n", "<leader>tn", ":tabnext<CR>", { noremap = true, sil
 -- Go to previous tab
 vim.api.nvim_set_keymap("n", "<leader>tp", ":tabprevious<CR>", { noremap = true, silent = true })
 
+-- Switch to next buffer
+vim.api.nvim_set_keymap("n", "<leader>bn", ":bnext<CR>", { noremap = true, silent = true })
+-- Switch to previous buffer
+vim.api.nvim_set_keymap("n", "<leader>bp", ":bprevious<CR>", { noremap = true, silent = true })
+
 -- open new split pane to right
 vim.api.nvim_set_keymap("n", "<leader>sr", ":vsplit<CR>", { noremap = true })
 
@@ -33,7 +38,7 @@ vim.api.nvim_set_keymap("n", "<C-w>j", ":resize -5<CR>", { noremap = true, silen
 vim.keymap.set(
 	"n",
 	"<C-n>",
-	":Neotree position=filesystem reveal right toggle=true<CR>",
+	":Neotree position=filesystem reveal float toggle=true<CR>",
 	{ noremap = true, silent = true }
 )
 

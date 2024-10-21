@@ -17,16 +17,16 @@ vim.o.foldlevel = 1
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 -- keep folds after save
-vim.api.nvim_exec(
-	[[
-  augroup remember_folds
-    autocmd!
-    autocmd BufWinLeave *.* mkview
-    autocmd BufWinEnter *.* silent! loadview
-  augroup END
-]],
-	false
-)
+-- vim.api.nvim_exec2(
+-- 	[[
+--   augroup remember_folds
+--     autocmd!
+--     autocmd BufWinLeave *.* mkview
+--     autocmd BufWinEnter *.* silent! loadview
+--   augroup END
+-- ]],
+-- 	{ output = false }
+-- )
 
 -- always show the sign column
 vim.opt.signcolumn = "yes"

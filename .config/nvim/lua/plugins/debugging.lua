@@ -46,6 +46,7 @@ return {
 		dependencies = {
 			"mfussenegger/nvim-dap",
 			"mxsdev/nvim-dap-vscode-js",
+			"nvim-neotest/nvim-nio",
 		},
 
 		config = function()

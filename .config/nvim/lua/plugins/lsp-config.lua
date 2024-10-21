@@ -23,7 +23,7 @@ return {
 					"html",
 					"pyright",
 					"lua_ls",
-					"tsserver",
+					"ts_ls",
 					"ruff_lsp",
 				},
 			})
@@ -72,9 +72,26 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 				handlers = handlers,
+				settings = {
+					Lua = {
+						runtime = {
+							version = "LuaJIT",
+						},
+						diagnostics = {
+							globals = { "vim" },
+						},
+						workspace = {
+							-- library = vim.api.nvim_get_runtime_file("", true),
+							checkThirdParty = false,
+						},
+						telemetry = {
+							enable = false,
+						},
+					},
+				},
 			})
 
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 				handlers = handlers,
 			})
